@@ -32,8 +32,12 @@
         });
 
         const data = await response.json();
-        console.log(data);
-        chatDiv.innerHTML += `<br><p>${text}${data.text}</p>`;
+        const p1 = document.createElement("p");
+        const p2 = document.createElement("p");
+        p1.textContent = text;
+        p2.textContent = data.text;
+        chatDiv.appendChild(p1);
+        chatDiv.appendChild(p2);
       }
 
       // 送信ボタンのクリックハンドラー

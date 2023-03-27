@@ -29,10 +29,24 @@ def generate_text(prompt):
     return message
 
 
+def generate_chat_text(prompt):
+    response = openai.ChatCompletion.create(
+      model="gpt-3.5-turbo",
+      messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            # {"role": "user", "content": "Who won the world series in 2020?"},
+            # {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+            {"role": "user", "content": prompt}
+        ]
+    )
+    message = response['choices'][0]['message']['content']
+    return message
+
+
 # チャットボットの実装
 @app.route("/chat", methods=["POST"])
 def chat():
     data = request.get_json()
     prompt = data["text"]
-    message = generate_text(prompt)
+    message = generate_chat_text(prompt)
     return jsonify({"text": message})

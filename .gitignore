@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+instance/
+
+# Environment variables file
+.env
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+nosetests.xml
+flake8_report.txt
+
+# Dependency directories
+venv/
+env/
+env2/
+env3/
+venv2/
+venv3/
+envs/
+.venv/
+.venv3/
+env36/
+env37/
+.env37/
+.env38/
+.env39/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+*.tar.gz
+*.pyz
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.bak
+*.swp
+

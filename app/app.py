@@ -1,10 +1,10 @@
 import openai
 from flask import Flask, jsonify, render_template, request
 
-from .config import OPENAI_API_KEY
+from .config import API_KEY
 
 # OpenAI APIの初期化
-openai.api_key = OPENAI_API_KEY
+openai.api_key = API_KEY
 
 
 app = Flask(__name__)
